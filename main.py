@@ -59,7 +59,7 @@ while True:
         print("\033[31m" + "This date does not exist! Try again." + "\033[0m")
         continue
 
-    if ((day >= 15 and month == 10) or month >= 10 and year == 1582) or (year > 1582):
+    if (day >= 15 and month >= 10 and year == 1582) or (year > 1582):
         leap = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
         print(gregorian(day, month, year, leap))
         continue
